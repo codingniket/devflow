@@ -9,10 +9,7 @@ const Home = async () => {
 
   return (
     <div>
-      <h1 className="bg-amber-500">Welcome to the world of Next.js</h1>
-
       <form
-        className="px-10"
         action={async () => {
           "use server";
 
