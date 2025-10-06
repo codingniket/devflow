@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { SessionProvider } from "next-auth/react";
 import { ReactNode } from "react";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 import "./globals.css";
 import { auth } from "@/auth";
@@ -51,7 +52,7 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <NuqsAdapter>{children}</NuqsAdapter>
           </ThemeProvider>
           <Toaster />
         </body>
